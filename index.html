@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pohlmann – Tore, Türen und Sicherheit in Mannheim</title>
+<meta name="description" content="Schlosserei und Montagebetrieb Markus Pohlmann in Mannheim: Hörmann-Vertriebspartner für Tore, Türen, Fenster und Sicherheit.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500&display=swap">
+<style>
+:root{--bg:#e8e7e3;--fg:#14171a;--mut:#5b6166;--acc:#f2b705;--at:#8a6400;--pan:#d9d8d3;--ln:#14171a26;--ease:cubic-bezier(.2,.7,.1,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101315;--fg:#ecebe6;--mut:#979da2;--at:#f2b705;--pan:#1a1e21;--ln:#ecebe62e}}
+:root[data-theme="dark"]{--bg:#101315;--fg:#ecebe6;--mut:#979da2;--at:#f2b705;--pan:#1a1e21;--ln:#ecebe62e}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 Barlow,system-ui,sans-serif;overflow-x:hidden;min-height:100%}
+h1,h2,h3,.cd{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+a{color:inherit}.wrap{padding:0 clamp(18px,5vw,72px)}
+header{position:fixed;inset:0 0 auto;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) clamp(18px,5vw,72px) 12px;background:linear-gradient(var(--bg) 45%,transparent)}
+.logo{font:700 1.4rem "Barlow Condensed",sans-serif;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}.logo b{background:var(--acc);color:#14171a;padding:0 6px;margin-right:6px}
+nav{display:flex;gap:clamp(14px,2.5vw,34px)}
+nav a{text-decoration:none;font:600 1rem "Barlow Condensed";text-transform:uppercase;letter-spacing:.1em;padding:8px 0;color:var(--mut);border-bottom:3px solid transparent;transition:.4s}
+nav a:hover,nav a[aria-current]{color:var(--fg);border-color:var(--acc)}
+.burger{display:none;background:var(--bg);border:2px solid var(--fg);color:var(--fg);padding:8px 14px;font:600 1rem "Barlow Condensed";text-transform:uppercase}
+@media(max-width:760px){.burger{display:block;position:relative;z-index:40}nav{position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;padding:0 8vw;gap:4px;transform:translateY(-100%);transition:transform .6s var(--ease)}nav.open{transform:none}nav a{font-size:3.4rem;border:0;color:var(--fg)}}
+main{display:none;min-height:100vh}main.on{display:block;animation:in .6s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.cta{display:inline-block;background:var(--acc);color:#14171a;padding:14px 26px;text-decoration:none;border:0;font:700 1.1rem "Barlow Condensed";text-transform:uppercase;letter-spacing:.08em;cursor:pointer;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);padding-right:36px;transition:transform .4s var(--ease)}
+.cta:hover{transform:translateX(6px)}.cta.o{background:none;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg);clip-path:none;padding-right:26px}
+.ey{font:600 1rem "Barlow Condensed";letter-spacing:.2em;text-transform:uppercase;color:var(--at);margin-bottom:14px}
+.big{font-size:clamp(2.6rem,7vw,6.5rem)}
+/* hero door */
+.hero{height:260vh}
+.stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.bh{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(18px,5vw,72px)}
+.bh h1{font-size:clamp(3.6rem,13vw,13rem)}.bh h1 span{display:block}.bh h1 span:nth-child(2){color:transparent;-webkit-text-stroke:2px var(--fg);margin-left:6vw}
+.bh p{max-width:36ch;margin:3vh 0 2.4vh;font-size:1.15rem}
+.door{position:absolute;inset:0;z-index:10;pointer-events:none}
+.sl{position:absolute;left:0;right:0;top:calc(var(--i)*16.667%);height:16.667%;background:repeating-linear-gradient(90deg,#0000 0 60px,#0000001f 60px 62px),linear-gradient(#3b4248,#2a2f34);border-bottom:3px solid #14171a;transform:translateY(calc(var(--p,0)*var(--i)*-16.667svh));display:flex;align-items:center;justify-content:center;color:#f2b705;font:700 clamp(1rem,2.4vw,2rem) "Barlow Condensed";letter-spacing:.5em;text-transform:uppercase}
+.sl:nth-child(1){z-index:6}.sl:nth-child(2){z-index:5}.sl:nth-child(3){z-index:4}.sl:nth-child(4){z-index:3}.sl:nth-child(5){z-index:2}.sl:nth-child(6){z-index:1}
+.door.done{opacity:0;transition:opacity .4s}
+.hint{position:absolute;bottom:calc(5vh + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:11;color:#f2b705;font:600 .9rem "Barlow Condensed";letter-spacing:.3em;text-transform:uppercase;opacity:calc(1 - var(--p,0)*6)}
+@media(max-width:760px),(prefers-reduced-motion:reduce){.hero{height:auto}.stick{position:relative;height:auto;min-height:100svh;padding:16vh 0 10vh}.bh{position:relative;inset:auto}.door,.hint{display:none}}
+@media(prefers-reduced-motion:reduce){main.on{animation:none}*{transition:none!important}}
+/* timeline */
+.hz{position:relative}.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hz h2{margin-bottom:4vh}
+.track{display:flex;gap:2vw;padding:0 clamp(18px,5vw,72px);will-change:transform}
+.pn{flex:0 0 min(64vw,600px);height:54vh;background:var(--pan);padding:26px;display:flex;flex-direction:column;justify-content:space-between;border-top:6px solid var(--acc)}
+.pn .y{font:700 clamp(5rem,12vw,10rem)/.8 "Barlow Condensed";letter-spacing:-.02em}.pn p{font-size:1.1rem;max-width:34ch}
+.bar{height:3px;background:var(--ln);margin:4vh clamp(18px,5vw,72px) 0}.bar div{height:100%;background:var(--acc)}
+@media(max-width:760px),(prefers-reduced-motion:reduce){.hz{height:auto!important}.pin{position:static;height:auto;padding:10vh 0 4vh}.track{overflow-x:auto;scroll-snap-type:x mandatory;transform:none!important;padding-bottom:12px}.pn{scroll-snap-align:center;flex-basis:80vw;height:44vh}.bar{display:none}}
+.sec{padding:14vh 0 8vh}
+.pv{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8vh;border-top:3px solid var(--fg)}
+.pv a{padding:5vh 20px 5vh 0;text-decoration:none;border-bottom:1px solid var(--ln)}.pv h3{font-size:clamp(2.2rem,4vw,3.6rem);margin:6px 0;transition:color .3s}.pv a:hover h3{color:var(--at)}.pv small{color:var(--mut)}
+@media(max-width:760px){.pv{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rv.s{opacity:1;transform:none}
+/* explore stack */
+.st{padding:16vh 0 10vh}
+.sc{position:sticky;top:calc(9vh + var(--k)*14px);background:var(--pan);border-top:6px solid var(--acc);margin:0 clamp(18px,5vw,72px) 12vh;padding:clamp(20px,3vw,44px);display:grid;grid-template-columns:auto 1fr 1fr;gap:3vw;min-height:62vh;box-shadow:0 -20px 40px -20px #0006}
+.sc .cd{font-size:clamp(5rem,15vw,13rem);line-height:.8;color:var(--at);opacity:.9}
+.sc h2{font-size:clamp(2.2rem,5vw,4.6rem);margin-bottom:14px}
+.sc ul{list-style:none;padding:0}.sc li{padding:10px 0;border-bottom:1px solid var(--ln);display:flex;justify-content:space-between}.sc li::after{content:"+";color:var(--at);font-weight:700}
+.sc .r{display:flex;flex-direction:column;justify-content:space-between}
+@media(max-width:900px){.sc{grid-template-columns:1fr;position:relative;top:0;min-height:0}.sc .cd{font-size:5rem}}
+/* showcase configurator */
+.cf{display:grid;grid-template-columns:1.5fr 1fr;gap:5vw;margin-top:5vh;align-items:start}
+@media(max-width:900px){.cf{grid-template-columns:1fr}}
+.gar{position:relative;aspect-ratio:4/3;background:linear-gradient(#cfcdc6 0 70%,#8e8c85 70%);border:1px solid var(--ln);overflow:hidden}
+.gar .op{position:absolute;left:12%;right:12%;top:12%;bottom:30%;background:linear-gradient(#0a0a0a,#2a2a2a);display:flex;align-items:flex-end;justify-content:center;color:#f2b705;font:700 .9rem "Barlow Condensed";letter-spacing:.3em}
+.gar .dr{position:absolute;left:12%;right:12%;top:12%;bottom:30%;transform:translateY(calc(var(--o,0)*-100%));transition:transform .15s linear;background:var(--dc);display:grid;grid-template-rows:repeat(5,1fr);border:3px solid #0006}
+.gar .dr i{border-bottom:2px solid #0004;position:relative}
+.gar.s1 .dr i{background:repeating-linear-gradient(90deg,#0000 0 18px,#0002 18px 20px)}
+.gar.s2 .dr i{background:none}
+.gar.s3 .dr i::after{content:"";position:absolute;inset:14% 6%;border:2px solid #0004;box-shadow:inset 0 0 0 4px #0001}
+.gar.w .dr i:nth-child(2){background:linear-gradient(135deg,#a9d3ec,#eaf6ff);box-shadow:inset 0 0 0 6px var(--dc)}
+.gar.w .dr i:nth-child(2)::after{display:none}
+.ctl h3{font-size:1.4rem;margin:22px 0 10px}.ctl h3:first-child{margin-top:0}
+.opt{display:flex;flex-wrap:wrap;gap:8px}
+.opt button{border:2px solid var(--ln);background:var(--bg);color:var(--fg);padding:10px 16px;font:600 1rem "Barlow Condensed";text-transform:uppercase;letter-spacing:.06em;cursor:pointer;display:flex;gap:8px;align-items:center}
+.opt button[aria-pressed=true]{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.opt .dot{width:16px;height:16px;border:1px solid #0008;display:inline-block}
+.ctl input[type=range]{width:100%;accent-color:#d99f00}
+.note{color:var(--mut);font-size:.88rem;margin-top:12px}
+/* connect */
+.cn{display:grid;grid-template-columns:1fr 1fr;gap:8vw;min-height:100vh;padding-top:18vh}
+@media(max-width:760px){.cn{grid-template-columns:1fr;gap:6vh}}
+.cn h1{font-size:clamp(3rem,7vw,6.5rem)}
+.steps{display:flex;gap:6px;margin-bottom:24px}.steps i{flex:1;height:5px;background:var(--ln);transition:background .5s}.steps i.d{background:var(--acc)}
+fieldset{border:0;display:none;padding:0}fieldset.on{display:block;animation:in .6s var(--ease)}
+legend{font:700 2rem "Barlow Condensed";text-transform:uppercase;margin-bottom:16px}
+.fo{display:flex;flex-wrap:wrap;gap:8px}
+.fo label{border:2px solid var(--ln);padding:10px 16px;cursor:pointer;background:var(--bg);font:600 1rem "Barlow Condensed";text-transform:uppercase;letter-spacing:.06em}
+.fo input{position:absolute;opacity:0}.fo label:has(input:checked){background:var(--fg);color:var(--bg);border-color:var(--fg)}.fo label:has(input:focus-visible){outline:3px solid var(--acc);outline-offset:2px}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;background:none;border:0;border-bottom:2px solid var(--ln);color:var(--fg);font:inherit;padding:12px 0;margin-bottom:14px;border-radius:0}
+input:focus,textarea:focus{outline:0;border-color:var(--acc)}
+.row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.info p{margin-bottom:18px}.info small{display:block;color:var(--mut);text-transform:uppercase;letter-spacing:.15em;font:600 .85rem "Barlow Condensed"}
+footer{border-top:3px solid var(--fg);background:var(--bg);position:relative;padding:5vh clamp(18px,5vw,72px) calc(5vh + env(safe-area-inset-bottom,0px));color:var(--mut);font-size:.9rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer span a{margin-right:14px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#home"><b>P</b>Pohlmann</a>
+<button class="burger" aria-expanded="false" aria-controls="nav">Menü</button>
+<nav id="nav" aria-label="Hauptnavigation"><a href="#home">Home</a><a href="#explore">Explore</a><a href="#showcase">Showcase</a><a href="#connect">Connect</a></nav>
+</header>
+
+<main id="home" data-t="Pohlmann – Tore, Türen und Sicherheit in Mannheim">
+<section class="hero" id="hero"><div class="stick">
+<div class="bh"><h1><span>Tore.</span><span>Türen.</span><span>Sicherheit.</span></h1>
+<p>Schlosserei und Montagebetrieb Markus Pohlmann in Mannheim. Ihr Hörmann-Vertriebspartner.</p>
+<div><a class="cta" href="#connect">Anfrage starten</a></div></div>
+<div class="door" id="door" aria-hidden="true"></div>
+<span class="hint">Scrollen: das Tor öffnet sich</span>
+</div></section>
+
+<section class="hz" id="hz"><div class="pin">
+<div class="wrap"><p class="ey">Firmengeschichte</p><h2 class="big">Von 1995 bis heute.</h2></div>
+<div class="track" id="track">
+<div class="pn"><span class="y">1995</span><p>Markus Pohlmann ist seit 1995 in der Montage von Bauelementen der Firma Hörmann tätig.</p></div>
+<div class="pn"><span class="y">2000</span><p>Meisterprüfung vor der Handwerkskammer Mannheim.</p></div>
+<div class="pn"><span class="y">2003</span><p>Gründung des Schlosserei- und Montagebetriebs in Ludwigshafen am Rhein, für Privat- und Industriekunden.</p></div>
+<div class="pn"><span class="y">2018</span><p>Umzug nach Mannheim-Käfertal und Eröffnung einer Ausstellung mit Hörmann-Produkten.</p></div>
+</div>
+<div class="bar" aria-hidden="true"><div></div></div>
+</div></section>
+
+<section class="sec wrap">
+<div class="rv"><p class="ey">Beratung · Verkauf · Montage · Wartung · Reparatur</p><h2 class="big" style="max-width:14ch">Alles rund um Ihr Bauelement.</h2></div>
+<div class="pv rv">
+<a href="#explore"><small>01</small><h3>Explore</h3><small>Tore, Türen, Sicherheit →</small></a>
+<a href="#showcase"><small>02</small><h3>Showcase</h3><small>Tor selbst ausprobieren →</small></a>
+<a href="#connect"><small>03</small><h3>Connect</h3><small>Anfrage und Anfahrt →</small></a>
+</div>
+<p style="margin-top:6vh;display:flex;gap:10px;flex-wrap:wrap"><a class="cta o" href="https://schlossereipohlmann.de/Konfigurator/" rel="noopener">Konfigurator ↗</a><a class="cta o" href="https://schlossereipohlmann.de/Online-Shop/" rel="noopener">Online Shop ↗</a></p>
+</section>
+</main>
+
+<main id="explore" data-t="Explore – Pohlmann">
+<section class="st" id="st"><div class="wrap" style="margin-bottom:6vh"><p class="ey">Explore</p><h1 class="big" style="font-size:clamp(3rem,9vw,8rem)">Leistungen.</h1></div></section>
+</main>
+
+<main id="showcase" data-t="Showcase – Pohlmann">
+<section class="sec wrap">
+<p class="ey">Showcase</p><h1 class="big" style="font-size:clamp(3rem,9vw,8rem)">Ihr Tor. Ihr Look.</h1>
+<p style="color:var(--mut);max-width:56ch;margin-top:14px">Eine Demo-Visualisierung zum Ausprobieren. Sie ersetzt nicht den Hörmann-Konfigurator der Schlosserei. Ihre Auswahl können Sie als Wunsch in die Anfrage übernehmen.</p>
+<div class="cf">
+<div><div class="gar s1" id="gar" style="--dc:#f4f4f2;--o:0"><div class="op">INNENRAUM</div><div class="dr"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+<div class="ctl">
+<h3>Farbe</h3><div class="opt" id="oc" role="group" aria-label="Farbe"></div>
+<h3>Oberfläche</h3><div class="opt" id="os" role="group" aria-label="Oberfläche"></div>
+<h3>Fensterreihe</h3><div class="opt" id="ow" role="group" aria-label="Fensterreihe"></div>
+<h3>Tor öffnen</h3><input type="range" id="op" min="0" max="85" value="0" aria-label="Tor öffnen">
+<p class="note" id="sum"></p>
+<p style="margin-top:14px"><a class="cta" href="#connect" id="take">Auswahl anfragen</a></p>
+</div></div>
+</section>
+</main>
+
+<main id="connect" data-t="Connect – Pohlmann">
+<section class="wrap cn">
+<div><p class="ey">Connect</p><h1>Wobei dürfen wir helfen?</h1>
+<div class="info" style="margin-top:6vh">
+<p><small>Adresse</small>Schlosserei &amp; Montagebetrieb M. Pohlmann<br>Obere Riedstr. 17<br>68309 Mannheim<br><a href="https://www.openstreetmap.org/search?query=Obere%20Riedstr.%2017%2C%2068309%20Mannheim" rel="noopener">Auf der Karte ansehen ↗</a></p>
+<p><small>Telefon</small><a href="tel:+4962174827428">+49 62174 827428</a></p>
+<p><small>E-Mail</small><a href="mailto:schlossereipohlmann@t-online.de">schlossereipohlmann@t-online.de</a></p></div></div>
+<form id="f" novalidate>
+<div class="steps"><i class="d"></i><i></i><i></i></div>
+<fieldset class="on"><legend>1 · Thema (mehrere möglich)</legend><div class="fo" id="fo"></div><div class="row"><button type="button" class="cta" data-n>Weiter</button></div></fieldset>
+<fieldset><legend>2 · Details</legend><label for="msg" style="color:var(--mut)">Objekt, Maße, Wünsche, Zeitraum</label><textarea id="msg" rows="5"></textarea>
+<div class="row"><button type="button" class="cta o" data-p>Zurück</button><button type="button" class="cta" data-n>Weiter</button></div></fieldset>
+<fieldset><legend>3 · Kontakt</legend>
+<input type="text" id="nm" placeholder="Name" autocomplete="name" aria-label="Name">
+<input type="email" id="em" placeholder="E-Mail" autocomplete="email" aria-label="E-Mail">
+<input type="tel" id="ph" placeholder="Telefon (optional)" autocomplete="tel" aria-label="Telefon">
+<p id="err" role="alert" style="color:var(--at);min-height:1.5em"></p>
+<div class="row"><button type="button" class="cta o" data-p>Zurück</button><button type="submit" class="cta">E-Mail vorbereiten</button></div>
+<p style="color:var(--mut);font-size:.85rem;margin-top:14px">Es öffnet sich Ihr E-Mail-Programm mit fertigem Text an schlossereipohlmann@t-online.de. Auf dieser Seite wird nichts gespeichert.</p></fieldset>
+</form></section>
+</main>
+
+<footer><span>© Schlosserei &amp; Montagebetrieb M. Pohlmann · Obere Riedstr. 17 · 68309 Mannheim</span><span><a href="https://schlossereipohlmann.de/Kontakt/Impressum/" rel="noopener">Impressum &amp; Datenschutz</a><a href="https://schlossereipohlmann.de/DOWNLOADS/" rel="noopener">Downloads</a></span></footer>
+
+<script>
+(function(){
+var G=[["Tore",["Garagentore","Hoftore und Einfahrtstore","Industrietore","Tiefgaragentore","Feuerschutzschiebetore","Elektronische Torantriebe","Schrankenanlagen"]],
+["Türen",["Wohnungs- und Haustüren","Innentüren und Zargen","Sicherheitstüren","Feuerschutztüren"]],
+["Sicherheit",["Mechanische und elektronische Schließsysteme","Schließanlagen und Sicherheitszylinder","Zutrittskontrollsysteme","Einbruchsicherung, Keller-, Tür- und Fenstersicherungen"]],
+["Fenster",["Alu- und Kunststofffenster","Sicherheitsverglasungen","Tür- und Fensterbeschläge"]],
+["Stauraum",["Stauraumsysteme (Details auf Anfrage)"]],
+["Service",["Fachberatung","Verkauf","Montage und Installation","Wartung und Reparatur"]]];
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,narrow=function(){return innerWidth<=760},preset=[],wish="";
+var nav=$("#nav"),bg=$(".burger");
+bg.onclick=function(){var o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+var pages=["home","explore","showcase","connect"];
+function route(){var h=(location.hash||"#home").slice(1);if(pages.indexOf(h)<0)h="home";
+$$("main").forEach(function(m){m.classList.toggle("on",m.id===h)});
+$$("nav a").forEach(function(a){a.getAttribute("href")==="#"+h?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+document.title=$("#"+h).dataset.t;scrollTo(0,0);nav.classList.remove("open");bg.setAttribute("aria-expanded","false");tick();
+if(h==="connect"){var pr=preset;preset=[];$$("#fo input").forEach(function(i){i.checked=pr.indexOf(i.value)>-1});if(wish){$("#msg").value=wish;wish=""}go(0)}}
+addEventListener("hashchange",route);
+/* door */
+var door=$("#door");for(var i=0;i<6;i++){var s=document.createElement("div");s.className="sl";s.style.setProperty("--i",i);s.textContent=i===2?"Pohlmann":"";door.appendChild(s)}
+var hero=$("#hero"),hz=$("#hz"),tr=$("#track"),bar=$(".bar div");
+function cl(x){return Math.max(0,Math.min(1,x))}
+function tick(){if(!$("#home").classList.contains("on"))return;
+var r=hero.getBoundingClientRect(),p=narrow()||reduce?1:cl(-r.top/(r.height-innerHeight)*1.15);hero.style.setProperty("--p",p);
+if(narrow()||reduce){hz.style.height="";tr.style.transform="";return}
+var d=tr.scrollWidth-innerWidth;hz.style.height=innerHeight+d+"px";var q=cl(-hz.getBoundingClientRect().top/d);
+tr.style.transform="translate3d("+(-q*d)+"px,0,0)";bar.style.width=q*100+"%"}
+var raf=0;addEventListener("scroll",function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;tick()})},{passive:true});addEventListener("resize",tick);
+addEventListener("keydown",function(e){if(!$("#home").classList.contains("on")||narrow()||reduce||e.target.closest("input,textarea,button"))return;var r=hz.getBoundingClientRect();if(r.top<=0&&r.bottom>innerHeight){if(e.key==="ArrowRight")scrollBy({top:300});if(e.key==="ArrowLeft")scrollBy({top:-300})}});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("s")})},{threshold:.15});
+$$(".rv").forEach(function(e){reduce?e.classList.add("s"):io.observe(e)});
+/* explore stack */
+var st=$("#st");G.forEach(function(g,i){var c=document.createElement("div");c.className="sc";c.style.setProperty("--k",i);
+c.innerHTML='<div class="cd" aria-hidden="true">0'+(i+1)+'</div><div><h2>'+g[0]+'</h2></div><div class="r"><ul>'+g[1].map(function(x){return"<li>"+x+"</li>"}).join("")+'</ul><p style="margin-top:20px"><a class="cta" href="#connect" data-q="'+i+'">Dafür anfragen</a></p></div>';st.appendChild(c)});
+$$("[data-q]").forEach(function(a){a.onclick=function(){preset=[G[a.dataset.q][0]]}});
+/* configurator demo */
+var cols=[["Weiß","#f4f4f2"],["Anthrazit","#3a4046"],["Silber","#b9bcbf"],["Dunkelbraun","#4a3426"]],sty=[["Rillen","s1"],["Glatt","s2"],["Kassetten","s3"]],cur={c:0,s:0,w:0};
+function btns(id,arr,key){var el=$(id);arr.forEach(function(a,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-pressed",i===cur[key]);b.innerHTML=(a[1]&&a[1][0]==="#"?'<span class="dot" style="background:'+a[1]+'"></span>':"")+a[0];b.onclick=function(){cur[key]=i;$$("button",el).forEach(function(x,k){x.setAttribute("aria-pressed",k===i)});draw()};el.appendChild(b)})}
+btns("#oc",cols,"c");btns("#os",sty,"s");btns("#ow",[["Ohne",""],["Mit",""]],"w");
+var gar=$("#gar"),op=$("#op");
+function draw(){gar.style.setProperty("--dc",cols[cur.c][1]);gar.className="gar "+sty[cur.s][1]+(cur.w?" w":"");
+$("#sum").textContent="Wunsch (Demo): Farbe "+cols[cur.c][0]+", Oberfläche "+sty[cur.s][0]+", Fensterreihe "+(cur.w?"mit":"ohne")+". Farben sind nur Beispiele, nicht die verfügbaren Hörmann-Farben."}
+op.oninput=function(){gar.style.setProperty("--o",op.value/100)};
+$("#take").onclick=function(){preset=["Tore"];wish="Mein Wunsch aus der Demo-Visualisierung: Garagentor, Farbe "+cols[cur.c][0]+", Oberfläche "+sty[cur.s][0]+", Fensterreihe "+(cur.w?"mit":"ohne")+"."};
+draw();
+/* form */
+var fo=$("#fo");G.concat([["Anderes"]]).forEach(function(g){var l=document.createElement("label");l.innerHTML='<input type="checkbox" value="'+g[0]+'"> '+g[0];fo.appendChild(l)});
+var fs=$$("fieldset"),stp=$$(".steps i"),n=0;
+function go(k){n=k;fs.forEach(function(f,i){f.classList.toggle("on",i===k)});stp.forEach(function(s,i){s.classList.toggle("d",i<=k)})}
+$$("[data-n]").forEach(function(b){b.onclick=function(){go(n+1)}});$$("[data-p]").forEach(function(b){b.onclick=function(){go(n-1)}});
+$("#f").onsubmit=function(e){e.preventDefault();var nm=$("#nm").value.trim(),em=$("#em").value.trim();
+if(!nm||!/^\S+@\S+\.\S+$/.test(em)){$("#err").textContent="Bitte Name und gültige E-Mail-Adresse angeben.";return}
+$("#err").textContent="";var w=$$("#fo input:checked").map(function(i){return i.value}).join(", ")||"Allgemeine Anfrage";
+var body="Anfrage: "+w+"\n\n"+$("#msg").value+"\n\nName: "+nm+"\nE-Mail: "+em+"\nTelefon: "+$("#ph").value;
+location.href="mailto:schlossereipohlmann@t-online.de?subject="+encodeURIComponent("Anfrage: "+w)+"&body="+encodeURIComponent(body)};
+route();
+})();
+</script>
+</body>
+</html>
